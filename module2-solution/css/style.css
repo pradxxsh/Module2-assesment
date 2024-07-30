@@ -1,0 +1,92 @@
+/* Reset default margins and paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic styling */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f0f0f0;
+    padding: 0 10px;
+    min-height: 100vh; /* Ensure the body takes at least the full height of the viewport */
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em; /* Heading font size */
+}
+
+main {
+    flex: 1; /* Make main take up the remaining space */
+    margin: 20px auto;
+    max-width: 1200px; /* Center container with maximum width */
+}
+
+.section {
+    position: relative;
+    padding: 20px;
+    margin: 0 auto 20px auto; /* Center the sections horizontally and provide bottom margin */
+    border: 1px solid black;
+    background-color: #e0e0e0; /* Section background color */
+    width: 90%; /* Adjust the width of the section cards */
+    max-width: 1000px; /* Increase the maximum width */
+}
+
+/* Section title styles */
+.section-title {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #333; /* Section title background color */
+    color: #fff; /* Section title text color */
+    padding: 5px;
+    border: 1px solid black;
+    font-size: 1.25em; /* Section title font size */
+}
+
+/* Responsive layouts */
+
+/* Mobile view: All sections stack vertically */
+@media (max-width: 767px) {
+    .section {
+        width: 90%; /* Wider sections on mobile with more margin */
+        margin-bottom: 20px; /* Vertical spacing between sections */
+    }
+}
+
+/* Tablet view: All sections stack vertically */
+@media (min-width: 768px) and (max-width: 991px) {
+    .section {
+        width: 85%; /* Increase the width of the section cards */
+        margin-bottom: 20px; /* Vertical spacing between sections */
+    }
+}
+
+/* Desktop view: All sections stack vertically */
+@media (min-width: 992px) {
+    .section {
+        width: 80%; /* Increase the width of the section cards for desktop */
+        margin-bottom: 20px; /* Vertical spacing between sections */
+    }
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    border-top: 1px solid black;
+    margin-top: auto; /* Push footer to the bottom of the viewport if content is short */
+}
